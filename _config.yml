@@ -1,0 +1,32 @@
+# Site settings for ACT 2027.
+# This file is *NOT* reloaded automatically by `jekyll serve`; restart the server after editing it.
+
+title: ACT 2027
+description: > # this means to ignore newlines until "baseurl:"
+  The 10th International Conference on Applied Category Theory (ACT 2027), hosted by Gioele Zardini's group at MIT, Cambridge, Massachusetts, USA.
+# TODO: once the GitHub repo is created, set `baseurl` and `url` to match.
+#   - If served from https://<repo>.github.io           -> baseurl: ""            url: "https://<repo>.github.io"
+#   - If served from https://<org>.github.io/<repo>/    -> baseurl: "/<repo>"     url: "https://<org>.github.io"
+# The GitHub Pages workflow overrides `baseurl` automatically at build time.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# Conference facts shown across the site. Replace "TBD" as details are confirmed.
+conference:
+  edition: 10th
+  full_name: International Conference on Applied Category Theory
+  location: Cambridge, Massachusetts, USA
+  dates: TBD
+  contact_email: TBD
+
+# Build settings
+markdown: kramdown
+encoding: utf-8
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - Dockerfile
+  - compose.yaml
+  - Rakefile
+  - README.md

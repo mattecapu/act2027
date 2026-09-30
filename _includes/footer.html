@@ -1,0 +1,56 @@
+<!-- Footer -->
+
+<style>
+  .footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px; /* Adjust the margin as needed */
+  }
+
+  .footer-logos {
+    flex-wrap: wrap;
+    gap: 10px 0;
+  }
+
+  .footer-logos img {
+    margin: 0 18px; /* Adjust the margin as needed for spacing between logos */
+    max-width: 100px; /* Set the maximum width for each logo */
+    max-height: 60px;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;
+  }
+</style>
+
+<script type="text/javascript">
+function footerAlign() {
+  $('footer').css('display', 'block');
+  $('footer').css('height', 'auto');
+  var footerHeight = $('footer').outerHeight();
+  $('body').css('padding-bottom', footerHeight);
+  $('footer').css('height', footerHeight);
+}
+
+
+$(document).ready(function(){
+  footerAlign();
+});
+
+$( window ).resize(function() {
+  footerAlign();
+});
+</script>
+
+<footer class="footer">
+
+<div class="footer-logos">
+  <img src="{{ '/img/logos/mit_logo.png' | relative_url }}" alt="MIT" style="max-width: 120px;">
+  <img src="{{ '/img/logos/mit_cee.png' | relative_url }}" alt="MIT Civil and Environmental Engineering" style="max-width: 140px;">
+  <img src="{{ '/img/logos/lids_logo.png' | relative_url }}" alt="MIT LIDS">
+</div>
+
+<div class="copyright-text">
+  &copy; ACT 2027. The {{ site.conference.edition }} {{ site.conference.full_name }}, hosted at MIT. <a href="https://www.appliedcategorytheory.org/code-of-conduct/">Code of conduct</a>. <a href="https://accessibility.mit.edu/">Accessibility</a>.
+</div>
+</footer>

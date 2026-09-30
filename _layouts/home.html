@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+
+  <style>
+    .act-hero {
+      background: linear-gradient(135deg, #14213d 0%, #2d3a5e 55%, #3f3c78 100%);
+      color: #fff;
+      padding: 60px 0 50px 0;
+    }
+    .act-hero h1 { font-weight: 700; letter-spacing: 1px; margin-top: 0; color: #fff; }
+    .act-hero .subtitle { font-size: 2rem; opacity: .92; text-align: left; }
+    .act-hero .acronym { color: #8fd0a6; }
+    .act-hero p { text-align: left; }
+    .act-badge {
+      display: inline-block; margin-bottom: 18px; padding: 5px 14px;
+      border: 1px solid rgba(255,255,255,.5); border-radius: 999px;
+      font-size: .8rem; letter-spacing: 1.5px; text-transform: uppercase;
+    }
+    .act-hero-diagram { max-width: 230px; width: 100%; height: auto; }
+    .act-hero .tbd { background: rgba(255,255,255,.15); color: #fff; }
+    .theme-card {
+      border-radius: 14px; padding: 22px; height: 100%;
+      background: #fff; box-shadow: 0 6px 24px rgba(0,0,0,.08);
+      border-top: 5px solid var(--accent, #14213d);
+      margin-bottom: 20px;
+    }
+    .theme-card h4 { margin-top: 0; font-weight: 700; }
+    .theme-tag { font-size: .78rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent, #14213d); font-weight: 700; }
+    .partner-strip img { max-height: 120px; max-width: 280px; margin: 18px 30px; object-fit: contain; }
+    @media (max-width: 600px) { .partner-strip img { max-height: 80px; max-width: 180px; margin: 12px 16px; } }
+  </style>
+
+  <body id="page-top" class="index">
+    {% include navbar.html %}
+    <header>
+
+      <!-- Hero -->
+      <div class="act-hero">
+        <div class="container">
+          <div class="row" style="align-items:center; display:flex; flex-wrap:wrap;">
+            <div class="col-md-8">
+              <span class="act-badge">{{ site.conference.edition }} {{ site.conference.full_name }}</span>
+              <h1><span class="acronym">ACT</span> 2027</h1>
+              <p class="subtitle">{{ site.conference.location }} &bull; Dates <span class="tbd">TBD</span></p>
+              <p style="max-width:640px; margin-top:16px;">
+                Hosted by <a class="white-link" href="https://zardini.mit.edu" target="_blank"><b>Gioele Zardini's group</b></a>
+                at the <b>Massachusetts Institute of Technology</b>.
+              </p>
+            </div>
+            <div class="col-md-4" style="text-align:center;">
+              <!-- A commuting square -->
+              <svg class="act-hero-diagram" viewBox="0 0 240 200" role="img" aria-label="A commutative square diagram">
+                <defs>
+                  <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+                    <path d="M0,0 L10,4 L0,8 Z" fill="#ffffff"/>
+                  </marker>
+                </defs>
+                <g font-family="STIX Two Text, serif" font-style="italic" font-size="30" fill="#ffffff" text-anchor="middle">
+                  <text x="40" y="50">A</text>
+                  <text x="200" y="50">B</text>
+                  <text x="40" y="170">C</text>
+                  <text x="200" y="170" fill="#8fd0a6">D</text>
+                </g>
+                <g stroke="#ffffff" stroke-width="2" fill="none" marker-end="url(#arrowhead)">
+                  <line x1="62" y1="40" x2="176" y2="40"/>
+                  <line x1="40" y1="62" x2="40" y2="140"/>
+                  <line x1="200" y1="62" x2="200" y2="140"/>
+                  <line x1="62" y1="160" x2="176" y2="160"/>
+                </g>
+                <g font-family="STIX Two Text, serif" font-style="italic" font-size="20" fill="#ffffff" opacity=".85" text-anchor="middle">
+                  <text x="120" y="30">f</text>
+                  <text x="26" y="106">g</text>
+                  <text x="214" y="106">h</text>
+                  <text x="120" y="186">k</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12" style="margin-top: 40px;">
+            <h2 class="black-text">About the Conference</h2>
+            <p>
+              The <b>{{ site.conference.edition }} {{ site.conference.full_name }}</b> (ACT 2027) will take place at the
+              <b>Massachusetts Institute of Technology</b> in Cambridge, Massachusetts, USA. Dates: <span class="tbd">TBD</span>.
+              The conference will be preceded by the <a class="black-link" href="https://adjointschool.com/" target="_blank"><b>Adjoint School</b></a>
+              research week. Dates: <span class="tbd">TBD</span>.
+            </p>
+            <p>
+              ACT 2027 continues a series of conferences held in
+              <a class="black-link" href="https://compose.ioc.ee/act2026/" target="_blank">Tallinn (2026)</a>,
+              <a class="black-link" href="https://gataslab.org/act2025/act2025.html" target="_blank">Florida (2025)</a>,
+              <a class="black-link" href="https://oxford24.github.io/" target="_blank">Oxford (2024)</a>,
+              <a class="black-link" href="https://act2023.github.io/" target="_blank">Maryland (2023)</a>,
+              <a class="black-link" href="https://msp.cis.strath.ac.uk/act2022/index.html" target="_blank">Strathclyde (2022)</a>,
+              <a class="black-link" href="https://www.cl.cam.ac.uk/events/act2021/" target="_blank">Cambridge (2021)</a>,
+              <a class="black-link" href="http://act2020.mit.edu/" target="_blank">MIT (2020)</a>,
+              <a class="black-link" href="https://www.cs.ox.ac.uk/ACT2019/" target="_blank">Oxford (2019)</a>
+              and Leiden (2018). For its tenth edition, the conference returns to MIT, which hosted the online 2020 edition.
+            </p>
+            <p>
+              ACT welcomes participants from every background and especially encourages participation from underrepresented groups.
+              The organizers are committed to non-discrimination, equity and inclusion. All participants are expected to follow the
+              <a class="black-link" href="https://www.appliedcategorytheory.org/code-of-conduct/" target="_blank"><b>ACT code of conduct</b></a>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Registration + Financial support -->
+      <div class="container">
+        <div class="row" style="margin-top: 20px;">
+          <div class="col-md-12">
+            <h2 class="black-text section-title" id="registration">Registration</h2>
+            <p>Registration: <span class="tbd">TBD</span>. What the fee includes: <span class="tbd">TBD</span>.</p>
+          </div>
+          <div class="col-md-6">
+            <div class="theme-card" style="--accent:#14213d;">
+              <span class="theme-tag">Early-bird fees</span>
+              <table class="events-table" style="margin-top:10px;">
+                <tr><td class="year">Academics</td><td><span class="tbd">TBD</span></td></tr>
+                <tr><td class="year">Students</td><td><span class="tbd">TBD</span></td></tr>
+                <tr><td class="year">Industry</td><td><span class="tbd">TBD</span></td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="theme-card" style="--accent:#750014;">
+              <span class="theme-tag">Late fees</span>
+              <table class="events-table" style="margin-top:10px;">
+                <tr><td class="year">Academics</td><td><span class="tbd">TBD</span></td></tr>
+                <tr><td class="year">Students</td><td><span class="tbd">TBD</span></td></tr>
+                <tr><td class="year">Industry</td><td><span class="tbd">TBD</span></td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <h2 class="black-text section-title" id="programme">Programme</h2>
+            <p>The programme will appear on the <a class="black-link" href="{{ '/programme/' | relative_url }}"><b>programme</b></a> page. Programme: <span class="tbd">TBD</span>.</p>
+
+            <h2 class="black-text section-title" id="financial-support">Financial Support</h2>
+            <p>Financial support for participants: <span class="tbd">TBD</span>. How to apply: <span class="tbd">TBD</span>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Important dates -->
+      <div class="container">
+        <div class="row" style="margin-top: 10px;">
+          <div class="col-md-12">
+            <h2 class="black-text section-title" id="dates">Important Dates</h2>
+            <p>All deadlines are anywhere on Earth (AoE).</p>
+            <table class="events-table">
+              {% for d in site.data.dates %}
+              <tr>
+                <td class="year">{{ d.what }}</td>
+                <td>{% if d.when == "TBD" %}<span class="tbd">TBD</span>{% else %}{{ d.when }}{% endif %}</td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sponsors + Contact -->
+      <div class="container">
+        <div class="row" style="margin-top: 10px; margin-bottom: 30px;">
+          <div class="col-md-12">
+            <h2 class="black-text section-title" id="sponsors">Sponsors</h2>
+            <p>Sponsors: <span class="tbd">TBD</span>.</p>
+
+            <h2 class="black-text section-title" id="contact">Contact</h2>
+            <p>
+              Contact email:
+              {% if site.conference.contact_email == "TBD" %}<span class="tbd">TBD</span>{% else %}<a class="black-link" href="mailto:{{ site.conference.contact_email }}"><b>{{ site.conference.contact_email }}</b></a>{% endif %}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Host institution -->
+      <div class="mit-stripe" style="padding-top: 10px; padding-bottom: 30px;">
+        <div class="container">
+          <div class="row" style="margin-top: 30px; margin-bottom: 10px;">
+            <div class="col-md-12 white-text">
+              <h2 class="white-text" style="text-align:center;">Hosted by</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="partner-strip" style="display:flex; justify-content:center; align-items:center; flex-wrap:wrap; padding:28px 20px; background:#fff; border-radius:12px;">
+                <img src="{{ '/img/logos/mit_logo.png' | relative_url }}" alt="MIT">
+                <img src="{{ '/img/logos/mit_cee.png' | relative_url }}" alt="MIT Civil and Environmental Engineering">
+                <img src="{{ '/img/logos/lids_logo.png' | relative_url }}" alt="MIT LIDS">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br><br>
+
+    </header>
+
+    {% include javascript.html %}
+    {% include footer.html %}
+  </body>
+</html>

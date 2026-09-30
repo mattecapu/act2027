@@ -1,0 +1,52 @@
+---
+layout: page
+title: Call for papers
+heading: Call for Papers
+permalink: /cfp/
+---
+          <p class="events-intro">
+            Applied category theory uses the mathematics of composition to study systems in computer science, logic, physics,
+            engineering, biology, chemistry, linguistics, the social sciences and beyond. The ACT conference series gathers
+            this community every year to share recent results, meet across disciplines and help the field grow.
+          </p>
+
+          <h2 class="black-text section-title" id="submissions">Submissions</h2>
+          <table class="events-table">
+            <tr><td class="year">Submission categories</td><td><span class="tbd">TBD</span></td></tr>
+            <tr><td class="year">Page limits and format</td><td><span class="tbd">TBD</span></td></tr>
+            <tr><td class="year">Proceedings</td><td><span class="tbd">TBD</span></td></tr>
+            <tr><td class="year">Submission link</td><td><span class="tbd">TBD</span></td></tr>
+            <tr><td class="year">Reviewing process</td><td><span class="tbd">TBD</span></td></tr>
+            <tr><td class="year">Attendance format</td><td><span class="tbd">TBD</span></td></tr>
+          </table>
+
+          <h2 class="black-text section-title" id="dates">Dates and deadlines</h2>
+          <p>All deadlines are anywhere on Earth (AoE).</p>
+          <table class="events-table">
+            {% for d in site.data.dates %}{% if d.cfp %}
+            <tr>
+              <td class="year">{{ d.what }}</td>
+              <td>{% if d.when == "TBD" %}<span class="tbd">TBD</span>{% else %}{{ d.when }}{% endif %}</td>
+            </tr>
+            {% endif %}{% endfor %}
+          </table>
+
+          <h2 class="black-text section-title" id="committees">Committees</h2>
+
+          <h3 class="black-text">Program Committee Chairs</h3>
+          <p><span class="tbd">TBD</span></p>
+
+          <h3 class="black-text">Program Committee</h3>
+          <p><span class="tbd">TBD</span></p>
+
+          <h3 class="black-text">Organizing Committee</h3>
+          <ul>
+            <li><a class="black-link" href="https://zardini.mit.edu" target="_blank">Gioele Zardini</a>, Massachusetts Institute of Technology</li>
+            <li>Further members: <span class="tbd">TBD</span></li>
+          </ul>
+
+          <h3 class="black-text">Steering Committee</h3>
+          <p>
+            <span class="tbd">TBD</span>. See the <a class="black-link" href="https://www.appliedcategorytheory.org/" target="_blank"><b>Applied Category Theory</b></a>
+            website for the conference series.
+          </p>
