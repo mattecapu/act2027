@@ -37,7 +37,7 @@ permalink: /cfp/
           <p>The scientific chairs also chair the programme committee.</p>
           <ul>
             {% for c in site.conference.chairs %}
-            <li>{{ c.name }}, {{ c.affiliation }}, <a class="black-link" href="mailto:{{ c.email }}">{{ c.email }}</a></li>
+            <li><a class="black-link" href="{{ c.website }}" target="_blank">{{ c.name }}</a>, {{ c.affiliation }}, <a class="black-link" href="mailto:{{ c.email }}">{{ c.email }}</a></li>
             {% endfor %}
           </ul>
 

@@ -23,9 +23,11 @@ conference:
     - name: Tobias Fritz
       affiliation: University of Innsbruck, Austria
       email: tobias.fritz@uibk.ac.at
+      website: https://tobiasfritz.science/
     - name: Matteo Capucci
       affiliation: Independent Researcher
       email: matteo.capucci@gmail.com
+      website: https://matteocapucci.eu/
 
 # Build settings
 markdown: kramdown

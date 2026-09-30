@@ -105,7 +105,7 @@
             </p>
             <p>
               The scientific chairs of ACT 2027 are
-              {% for c in site.conference.chairs %}<b>{{ c.name }}</b>{% unless forloop.last %} and {% endunless %}{% endfor %}.
+              {% for c in site.conference.chairs %}<a class="black-link" href="{{ c.website }}" target="_blank"><b>{{ c.name }}</b></a>{% unless forloop.last %} and {% endunless %}{% endfor %}.
             </p>
             <p>
               ACT welcomes participants from every background and especially encourages participation from underrepresented groups.
@@ -186,7 +186,7 @@
             <p>Scientific chairs:</p>
             <ul>
               {% for c in site.conference.chairs %}
-              <li>{{ c.name }}, {{ c.affiliation }}, <a class="black-link" href="mailto:{{ c.email }}">{{ c.email }}</a></li>
+              <li><a class="black-link" href="{{ c.website }}" target="_blank">{{ c.name }}</a>, {{ c.affiliation }}, <a class="black-link" href="mailto:{{ c.email }}">{{ c.email }}</a></li>
               {% endfor %}
             </ul>
           </div>
