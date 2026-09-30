@@ -1,16 +1,17 @@
 # Top navigation bar. Items with `children` render as a dropdown.
 - title: Home
   url: /
-- title: Programme
-  url: /programme/
-- title: Papers
-  url: /papers/
-- title: Invited speakers
-  url: /invited/
-- title: Industry
-  url: /industry/
-- title: Call for papers
-  url: /cfp/
+# Hidden until there is content; uncomment to show again.
+# - title: Programme
+#   url: /programme/
+# - title: Papers
+#   url: /papers/
+# - title: Invited speakers
+#   url: /invited/
+# - title: Industry
+#   url: /industry/
+# - title: Call for papers
+#   url: /cfp/
 - title: Local info
   url: /local/
   children:
