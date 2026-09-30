@@ -33,8 +33,13 @@ permalink: /cfp/
 
           <h2 class="black-text section-title" id="committees">Committees</h2>
 
-          <h3 class="black-text">Program Committee Chairs</h3>
-          <p><span class="tbd">TBD</span></p>
+          <h3 class="black-text">Scientific Chairs</h3>
+          <p>The scientific chairs also chair the programme committee.</p>
+          <ul>
+            {% for c in site.conference.chairs %}
+            <li>{{ c.name }}, {{ c.affiliation }}, <a class="black-link" href="mailto:{{ c.email }}">{{ c.email }}</a></li>
+            {% endfor %}
+          </ul>
 
           <h3 class="black-text">Program Committee</h3>
           <p><span class="tbd">TBD</span></p>

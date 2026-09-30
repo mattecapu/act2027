@@ -15,7 +15,7 @@
     .act-badge {
       display: inline-block; margin-bottom: 18px; padding: 5px 14px;
       border: 1px solid rgba(255,255,255,.5); border-radius: 999px;
-      font-size: .8rem; letter-spacing: 1.5px; text-transform: uppercase;
+      font-size: .95rem; letter-spacing: 1.5px; text-transform: uppercase;
     }
     .act-hero-diagram { max-width: 230px; width: 100%; height: auto; }
     .act-hero .tbd { background: rgba(255,255,255,.15); color: #fff; }
@@ -26,7 +26,7 @@
       margin-bottom: 20px;
     }
     .theme-card h4 { margin-top: 0; font-weight: 700; }
-    .theme-tag { font-size: .78rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent, #14213d); font-weight: 700; }
+    .theme-tag { font-size: .95rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent, #14213d); font-weight: 700; }
     .partner-strip img { max-height: 120px; max-width: 280px; margin: 18px 30px; object-fit: contain; }
     @media (max-width: 600px) { .partner-strip img { max-height: 80px; max-width: 180px; margin: 12px 16px; } }
   </style>
@@ -83,7 +83,7 @@
       <!-- About -->
       <div class="container">
         <div class="row">
-          <div class="col-md-12" style="margin-top: 40px;">
+          <div class="col-md-12">
             <h2 class="black-text">About the Conference</h2>
             <p>
               The <b>{{ site.conference.edition }} {{ site.conference.full_name }}</b> (ACT 2027) will take place at the
@@ -104,6 +104,10 @@
               and Leiden (2018). For its tenth edition, the conference returns to MIT, which hosted the online 2020 edition.
             </p>
             <p>
+              The scientific chairs of ACT 2027 are
+              {% for c in site.conference.chairs %}<b>{{ c.name }}</b>{% unless forloop.last %} and {% endunless %}{% endfor %}.
+            </p>
+            <p>
               ACT welcomes participants from every background and especially encourages participation from underrepresented groups.
               The organizers are committed to non-discrimination, equity and inclusion. All participants are expected to follow the
               <a class="black-link" href="https://www.appliedcategorytheory.org/code-of-conduct/" target="_blank"><b>ACT code of conduct</b></a>.
@@ -114,7 +118,7 @@
 
       <!-- Registration + Financial support -->
       <div class="container">
-        <div class="row" style="margin-top: 20px;">
+        <div class="row">
           <div class="col-md-12">
             <h2 class="black-text section-title" id="registration">Registration</h2>
             <p>Registration: <span class="tbd">TBD</span>. What the fee includes: <span class="tbd">TBD</span>.</p>
@@ -151,7 +155,7 @@
 
       <!-- Important dates -->
       <div class="container">
-        <div class="row" style="margin-top: 10px;">
+        <div class="row">
           <div class="col-md-12">
             <h2 class="black-text section-title" id="dates">Important Dates</h2>
             <p>All deadlines are anywhere on Earth (AoE).</p>
@@ -169,7 +173,7 @@
 
       <!-- Sponsors + Contact -->
       <div class="container">
-        <div class="row" style="margin-top: 10px; margin-bottom: 30px;">
+        <div class="row" style="margin-bottom: 30px;">
           <div class="col-md-12">
             <h2 class="black-text section-title" id="sponsors">Sponsors</h2>
             <p>Sponsors: <span class="tbd">TBD</span>.</p>
@@ -179,6 +183,12 @@
               Contact email:
               {% if site.conference.contact_email == "TBD" %}<span class="tbd">TBD</span>{% else %}<a class="black-link" href="mailto:{{ site.conference.contact_email }}"><b>{{ site.conference.contact_email }}</b></a>{% endif %}
             </p>
+            <p>Scientific chairs:</p>
+            <ul>
+              {% for c in site.conference.chairs %}
+              <li>{{ c.name }}, {{ c.affiliation }}, <a class="black-link" href="mailto:{{ c.email }}">{{ c.email }}</a></li>
+              {% endfor %}
+            </ul>
           </div>
         </div>
       </div>

@@ -203,6 +203,7 @@ body {
   font-family: "STIX Two Text";  
   font-size: 18px;
   font-weight: 400;
+  line-height: 1.6;
   text-align: justify;
 }
 
@@ -797,13 +798,26 @@ footer {
 .page-conf-line {
   color: #666;
   font-size: 16px;
-  margin-top: -4px;
+  margin-top: 0;
+  margin-bottom: 12px;
   text-align: left;
 }
 
-/* Section headings with anchors */
-h2.section-title {
-  margin-top: 36px;
+/* Heading rhythm: body text is 18px with 1.6 line height (about 29px per line).
+   Headings sit closer to the text they introduce than to the text before them. */
+h1, h2, h3, h4 { line-height: 1.2; }
+h1 { margin-top: 0;      margin-bottom: .45em; }  /* 36px text: 16px below */
+h2 { margin-top: 1.5em;  margin-bottom: .75em; }  /* 30px text: 45px above, 22px below */
+h3 { margin-top: 1.4em;  margin-bottom: .65em; }  /* 24px text: 34px above, 16px below */
+h4 { margin-top: 1.2em;  margin-bottom: .6em;  }  /* 18px text: 22px above, 11px below */
+.page-content > h2:first-child, .page-content > h3:first-child, .mit-stripe h2 { margin-top: 0; }
+p { margin-bottom: .8em; }
+
+/* Links in running text are underlined (navbar and footer are outside <header>) */
+header .container p a, header .container li a, header .container td a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .15em;
 }
 
 /* Cards (as used for events) */
@@ -812,7 +826,7 @@ h2.section-title {
   background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,.07);
   border-left: 5px solid #14213d;
 }
-.event-card h4 { margin: 6px 0; }
+.event-card h4 { margin: 8px 0 10px; }
 .event-date { font-weight: 700; color: #14213d; }
 
 /* Two-column tables (dates, fees, committees) */
@@ -821,11 +835,11 @@ h2.section-title {
 .events-table td.year { white-space: nowrap; font-weight: 700; color: #14213d; width: 45%; }
 .events-table td.year.narrow { width: 90px; }
 
-.events-intro { font-size: 18px; line-height: 1.65; }
+.events-intro { font-size: 18px; }
 
 /* "To be determined" badge */
 .tbd {
-  display: inline-block; font-size: .78rem; text-transform: uppercase; letter-spacing: 1px;
+  display: inline-block; font-size: .95rem; text-transform: uppercase; letter-spacing: 1px;
   background: #f6eef0; color: #750014; border-radius: 6px; padding: 2px 9px; font-weight: 700;
   vertical-align: middle;
 }

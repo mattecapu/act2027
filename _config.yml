@@ -18,6 +18,14 @@ conference:
   location: Cambridge, Massachusetts, USA
   dates: TBD
   contact_email: TBD
+  # Scientific (programme committee) chairs.
+  chairs:
+    - name: Tobias Fritz
+      affiliation: University of Innsbruck, Austria
+      email: tobias.fritz@uibk.ac.at
+    - name: Matteo Capucci
+      affiliation: Independent Researcher
+      email: matteo.capucci@gmail.com
 
 # Build settings
 markdown: kramdown
